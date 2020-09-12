@@ -1,0 +1,34 @@
+# Filename: my.kv
+
+<MyGrid>:
+
+    first_name: first_name
+    last_name: last_name
+
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+        
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                id: first_name
+                text: 'Name: '
+            
+            TextInput:
+                multiline:False
+
+            Label:
+                id: last_name
+                text: 'Last Name: '
+
+            TextInput:
+                multiline:False
+            
+        Button:
+            text:"Submit"
+            on_press: root.btn()
+            

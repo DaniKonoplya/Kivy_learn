@@ -1,0 +1,30 @@
+# popup.kv
+<Widgets>:
+
+    GridLayout:
+        cols:1
+        size: root.width - 100, root.height - 100
+        pos: 100, 100
+
+        TextInput:
+            id: text_input
+            hint_text:'Enter text'
+            # pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            #size_hint: 0.5,0.5 
+
+        Button:
+            text: "Press me"
+            on_press: root.show_popup()
+    
+<P>:
+    Label:
+        text: "You pressed the button"
+        size_hint: 0.6,0.2
+        pos_hint: {"x":0.2,"top":1}
+    
+    Button:
+        text: "You pressed the button"
+        size_hint: 0.8,0.2
+        pos_hint: {"x":0.1,"top":0.1}
+        # on_release: root.btn_close_popup()
+        on_release: app.close_popup()
