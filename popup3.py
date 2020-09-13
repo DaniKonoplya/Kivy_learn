@@ -29,8 +29,9 @@ class PopupApp(App):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         show = P()
-        self.popupWindow = Popup(title="Popup Window", content=show,
-                                 size_hint=(None, None), size=(400, 400))
+        # The below object can be created only once
+        self.popupWindow = Popup(
+            title="Popup Window", content=show, size_hint=(None, None), size=(400, 400))
         self.widget = None
 
     def build(self):
