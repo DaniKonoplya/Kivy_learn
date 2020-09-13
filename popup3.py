@@ -32,7 +32,7 @@ class PopupApp(App):
         # The below object can be created only once
         self.popupWindow = Popup(
             title="Popup Window", content=show, size_hint=(None, None), size=(400, 400))
-        self.widget = None
+  
 
     def build(self):
         return Widgets()
